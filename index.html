@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 
 	<!-- Open Graph meta (Facebook, LinkedIn) -->
-    <meta property="og:title" content="Nina Carducci - Photographe professionnelle">
+    <meta property="og:title" content="Nina Carducci - Photographe professionnelle à Bordeaux">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ninacarducci.github.io">
-    <meta property="og:image" content="./assets/images/nina.webp">
+    <meta property="og:image" content="https://ninacarducci.github.io/assets/images/nina.webp">
     <meta property="og:description" content="Photographe professionnelle à Bordeaux. Portraits, mariages, événements – réservez votre séance photo avec Nina Carducci.">
     <meta property="og:site_name" content="Nina Carducci Photographie">
     <meta property="og:locale" content="fr_FR">
 
     <!-- Twitter Card meta -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nina Carducci - Photographe professionnelle">
+    <meta name="twitter:title" content="Nina Carducci - Photographe professionnelle à Bordeaux">
     <meta name="twitter:description" content="Photographe professionnelle à Bordeaux. Portraits, mariages, événements – réservez votre séance photo avec Nina Carducci.">
-    <meta name="twitter:image" content="./assets/images/nina.webp">
+    <meta name="twitter:image" content="https://ninacarducci.github.io/assets/images/nina.webp">
 
     <!-- Instagram meta -->
     <meta name="instagram:creator" content="@ninacarducci.photo">
@@ -24,11 +24,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Photographe professionnelle à Bordeaux. Portraits, mariages, événements – réservez votre séance photo avec Nina Carducci.">
 	
-	<title>Nina Carducci - Photographe</title>
-	<link rel="preload" as="image" href="./assets/images/slider/mobile/ryoji-iwata.webp" media="(max-width: 425px)" type="image/webp">
-	<link rel="preload" as="image" href="./assets/images/slider/mobile/ryoji-iwata.webp" media="(min-width: 426px)" type="image/webp">
+	<title>Nina Carducci - Photographe professionnelle à Bordeaux</title>
 	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="./assets/style.css">
+	<link rel="stylesheet" href="./assets/style.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
@@ -36,19 +34,45 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="./assets/maugallery.min.js" defer></script>
 	<script src="./assets/scripts.js" defer></script>
+	<script type="application/ld+json">
+		{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nina Carducci",
+  "image": "https://ninacarducci.github.io/assets/images/nina.webp",
+  "description": "Photographe professionnelle à Bordeaux spécialisée en portraits, mariages et événements.",
+  "url": "https://ninacarducci.github.io",
+  "telephone": "+33556677889",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "68 avenue Alsace-Lorraine",
+    "addressLocality": "Bordeaux",
+    "postalCode": "33200",
+    "addressCountry": "FR"
+  },
+  "openingHours": "Mo-Fr 10:00-19:00",
+  "sameAs": [
+    "https://www.instagram.com/ninacarducci.photo/"
+  ], 
+  "priceRange": "€€"
+}
+</script>
 </head>
 <body>
 <header>
-	<h1 class="name">Nina Carducci</h1>
-	<nav>   
-		<ul>
-			<li><a href="#about">À propos</a></li>
-			<li><a href="#gallery">Galerie</a></li>
-			<li><a href="#services">Service</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="image logo instagram"></a></li>
-		</ul>
-	</nav>
+  <h1 class="name">
+    Nina Carducci
+    <span class="sr-only"> - Photographe professionnelle à Bordeaux</span>
+  </h1>
+  <nav>   
+    <ul>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.webp" alt="image logo instagram"></a></li>
+    </ul>
+  </nav>
 </header>
 <main>
 <section id="header" aria-label="carrousel d’images">
@@ -62,19 +86,16 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<picture>
-					<source media="(max-width: 425px)" type="image/webp" srcset="./assets/images/slider/mobile/ryoji-iwata.webp">
-					<img src="./assets/images/slider/ryoji-iwata.webp" alt="image carousel Ryoji Iwata" loading="eager" fetchpriority="high">
+					<img src="./assets/images/slider/ryoji-iwata.webp" alt="image carousel Ryoji Iwata">
 				</picture>
 			</div>
 			<div class="carousel-item">
 				<picture>
-					<source media="(max-width: 425px)" type="image/webp" srcset="./assets/images/slider/mobile/nicholas-green.webp">
 				<img src="./assets/images/slider/nicholas-green.webp" alt="image carousel Nicholas Green">
 				</picture>
 			</div>
 			<div class="carousel-item">
 				<picture>
-					<source media="(max-width: 425px)" type="image/webp" srcset="./assets/images/slider/mobile/edward-cisneros.webp">
 				<img src="./assets/images/slider/edward-cisneros.webp" alt="image carousel Edward Cisneros">
 				</picture>
 			</div>
@@ -92,25 +113,27 @@
 		<img src="./assets/images/nina.webp" alt="image profil Nina Carducci">
 	</figure>
 	<article id="about-me">
-		<h2 class="about-me__title">A propos de moi</h2>
-		<h3 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h3>
-		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
-			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
+		<h2 class="about-me__title">A propos de moi <span class="sr-only"> Nina Carducci - Photographe professionnelle à Bordeaux</span> </h2>
+		<h3 class="about-me__introduction">
+      	Photographe professionnelle à Bordeaux, spécialisée dans les portraits, mariages et événements, je capture l’émotion et la lumière pour rendre vos souvenirs éternels.
+    	</h3>
+		<p> Devenir photographe était une évidence pour moi. Saisir un moment unique, une émotion authentique, une lumière parfaite, c’est ce qui me fait vibrer.</p>
+		<p> Ma mission est simple : vous offrir des photographies qui racontent votre histoire, que ce soit pour un portrait personnel, un mariage inoubliable ou un événement professionnel à Bordeaux et ses environs.   Grâce à mon approche artistique et technique, je transforme vos instants précieux en images intemporelles que vous chérirez pour toujours.</p>
 	</article>
 </div>
 <section id="gallery">
 	<h2 class="title">Portfolio</h2>
 	<div class="container py-3">
-		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul.webp" alt="image concert Aaron Paul">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou.webp" alt="image concert entreprises Ali Morshedlou">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman.webp" alt="image concent entreprises Jason Goodman">
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing.webp" alt="image mariage Hannah Busing">
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji.webp" alt="image portraits Ade Tunji">
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens.webp" alt="image mariage Jakob Owens">
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg.webp" alt="image portraits Nino Van Prattenburg">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill.webp" alt="image concert Austin Neill">
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe.webp" alt="image entreprises Mateus Campos Felipe">
+		<div class="gallery">
+			<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul.webp" alt="image du concert de Aaron Paul">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou.webp" alt="image d'entreprise de Ali Morshedlou">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman.webp" alt="image d'entreprises de Jason Goodman">
+			<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing.webp" alt="image du mariage de Hannah Busing">
+			<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji.webp" alt="image d'un portrait de Ade Tunji">
+			<img loading="lazy" data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens.webp" alt="image du mariage de Jakob Owens">
+			<img loading="lazy" data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg.webp" alt="image d'un portrait de Nino Van Prattenburg">
+			<img loading="lazy" data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill.webp" alt="image du concert de Austin Neill">
+			<img loading="lazy" data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe.webp" alt="image d'entreprise de Mateus Campos Felipe">
 		</div>
 	</div>
 		<figure class="quote">
@@ -121,41 +144,55 @@
 		</figure>
 </section>
 <section id="services">
-	<h2 class="title">Mes services</h2>
-	<div class="container">
-		<article class="service">
-			<div class="service__description">
-				<h3>Shooting photo</h3>
-				<p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos</p>
-			</div>
-			<div class="service__price">
-				<h4>350€/demi journée</h4>
-				<span>Matériel, déplacement inclus</span>
-			</div>
+  <h2 class="title">Mes services <span class="sr-only">de photographie professionnelle à Bordeaux</span></h2>
+  <div class="container">
+    <article class="service" itemscope itemtype="https://schema.org/Service">
+      <div class="service__description">
+        <h3 itemprop="name">Shooting photo</h3>
+        <p itemprop="description">
+          Capturez vos moments les plus précieux grâce à une séance photo personnalisée. Je me déplace à Bordeaux et ses alentours pour immortaliser vos portraits, événements ou mariages avec professionnalisme et créativité.
+        </p>
+      </div>
+      <div class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <h4><span itemprop="price">350</span>€/demi-journée</h4>
+        <span>Matériel et déplacement inclus</span>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <link itemprop="availability" href="https://schema.org/InStock" />
+      </div>
+    </article>
 
-		</article>
-		<article class="service">
-			<div class="service__description">
-				<h3>Retouches</h3>
-				<p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
-			</div>
-			<div class="service__price">
-				<h4>50€/photo</h4>
-				<span>2 AR par photo</span>
-			</div>
-		</article>
-		<article class="service">
-			<div class="service__description">
-				<h3>Album photos</h3>
-				<p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
-			</div>
-			<div class="service__price">
-				<h4>400€ album A4</h4>
-				<span>30 pages recto/verso</span>
-			</div>
-		</article>
-	</div>
+    <article class="service" itemscope itemtype="https://schema.org/Service">
+      <div class="service__description">
+        <h3 itemprop="name">Retouches photo</h3>
+        <p itemprop="description">
+          Sublimez vos photos avec des retouches professionnelles, pour un rendu parfait adapté à vos besoins personnels ou à vos publications.
+        </p>
+      </div>
+      <div class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <h4><span itemprop="price">50</span>€/photo</h4>
+        <span>2 AR par photo inclus</span>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <link itemprop="availability" href="https://schema.org/InStock" />
+      </div>
+    </article>
+
+    <article class="service" itemscope itemtype="https://schema.org/Service">
+      <div class="service__description">
+        <h3 itemprop="name">Album photo personnalisé</h3>
+        <p itemprop="description">
+          Offrez-vous un album photo unique pour partager vos souvenirs avec vos proches ou vos clients, réalisé avec soin et professionnalisme.
+        </p>
+      </div>
+      <div class="service__price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <h4><span itemprop="price">400</span>€ pour un album A4</h4>
+        <span>30 pages recto/verso</span>
+        <meta itemprop="priceCurrency" content="EUR" />
+        <link itemprop="availability" href="https://schema.org/InStock" />
+      </div>
+    </article>
+  </div>
 </section>
+
 	<figure class="quote">
 		<blockquote>
 			<p class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</p>
@@ -168,7 +205,7 @@
 		<div class="form-container">
 			<h4>Une question ? Une demande de devis ?</h4>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-			<form action="#" method="post">
+			<form action="#" method="post" role="form" aria-label="Formulaire de contact">
 				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
 				<label for="email">Email</label>

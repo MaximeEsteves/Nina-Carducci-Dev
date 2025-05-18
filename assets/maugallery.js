@@ -60,9 +60,9 @@
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
-  );
-  $(".gallery").on("click", ".mg-next", () =>
-    $.fn.mauGallery.methods.nextImage(options.lightboxId)
+    );
+    $(".gallery").on("click", ".mg-next", () =>
+      $.fn.mauGallery.methods.nextImage(options.lightboxId)
     );
   };
   $.fn.mauGallery.methods = {
@@ -114,51 +114,11 @@
       }
     },
     openLightBox(element, lightboxId) {
-    const modal = $(`#${lightboxId}`);
-    const modalImage = modal.find(".lightboxImage");
-    
-    // Mettre à jour l'image
-    modalImage.attr("src", element.attr("src"));
-    
-    // Ouvrir la modale avec les bons attributs ARIA
-    modal.modal("show")
-         .attr("aria-hidden", "false")
-         .attr("aria-modal", "true")
-         .removeAttr("tabindex");
-    
-    // Gérer le focus
-    modal.on("shown.bs.modal", function() {
-        modalImage.focus();
-    });
-modal.on("keydown", function(e) {
-  const focusableElements = modal.find('button')
-    .filter(':visible');
-  
-  const firstElement = focusableElements.first()[0];
-  const lastElement = focusableElements.last()[0];
-
-  if (e.key === "Tab") {
-    if (e.shiftKey) { // shift + tab
-      if (document.activeElement === firstElement) {
-        e.preventDefault();
-        lastElement.focus();
-      }
-    } else { // tab
-      if (document.activeElement === lastElement) {
-        e.preventDefault();
-        firstElement.focus();
-      }
-    }
-  }
-});
-    // Gérer la fermeture et le retour du focus
-    modal.on("hidden.bs.modal", function() {
-        modal.attr("aria-hidden", "true");
-        element.focus();
-    });
-    
-},
-    /* clique slide gauche modal */
+      $(`#${lightboxId}`)
+        .find(".lightboxImage")
+        .attr("src", element.attr("src"));
+      $(`#${lightboxId}`).modal("toggle");
+    },
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -194,10 +154,9 @@ modal.on("keydown", function(e) {
         }
       });
       next =
-        imagesCollection[index -1]
+        imagesCollection[index - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
-    /* clique slide droite modal */
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -211,15 +170,14 @@ modal.on("keydown", function(e) {
         $(".item-column").each(function() {
           if ($(this).children("img").length) {
             imagesCollection.push($(this).children("img"));
-            
           }
         });
       } else {
         $(".item-column").each(function() {
           if (
             $(this)
-            .children("img")
-            .data("gallery-tag") === activeTag
+              .children("img")
+              .data("gallery-tag") === activeTag
           ) {
             imagesCollection.push($(this).children("img"));
           }
@@ -233,37 +191,32 @@ modal.on("keydown", function(e) {
           index = i;
         }
       });
-      next = imagesCollection[index +1];
+      next = imagesCollection[index +1] ;
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
-    gallery.append(`<div class="modal fade" id="${
+      gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
-    }" role="dialog" aria-labelledby="lightboxTitle">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                <h2 id="lightboxTitle" class="visually-hidden">Affichage d'une image en plein écran</h2>
-
-                    ${
-                        navigation
-                            ? '<button class="mg-prev" aria-label="Image précédente" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</button>'
-                            : '<span style="display:none;" />'
-                    }
-                    <img class="lightboxImage img-fluid" 
-                         tabindex="0"
-                         alt="Image en plein écran"
-                         aria-labelledby="lightboxTitle"/>
-                    ${
-                        navigation
-                            ? '<button class="mg-next" aria-label="Image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;">></button>'
-                            : '<span style="display:none;" />'
-                    }
+      }" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            ${
+                              navigation
+                                ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                                : '<span style="display:none;" />'
+                            }
+                            <img class="lightboxImage img-fluid" alt="Contenu de l'image affichée dans la modale au clique"/>
+                            ${
+                              navigation
+                                ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                                : '<span style="display:none;" />'
+                            }
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>`);
-},
+            </div>`);
+    },
     showItemTags(gallery, position, tags) {
       var tagItems =
         '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
@@ -292,12 +245,12 @@ modal.on("keydown", function(e) {
 
       $(".gallery-item").each(function() {
         $(this)
-        .parents(".item-column")
-        .hide();
+          .parents(".item-column")
+          .hide();
         if (tag === "all") {
           $(this)
-          .parents(".item-column")
-          .show(300);
+            .parents(".item-column")
+            .show(300);
         } else if ($(this).data("gallery-tag") === tag) {
           $(this)
             .parents(".item-column")
